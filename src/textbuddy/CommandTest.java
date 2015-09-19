@@ -97,6 +97,14 @@ public class CommandTest {
 		assertEquals(_testLines, ReadWrite.getLines());
 	}
 	
+	@Test
+	public void testSort() {
+		Command.sort();
+		
+		// check if the lines are sorted
+		assertEquals(TEST_SORT_TEXT, _output.toString());
+	}
+	
 	private void add() {
 		addIndividual(TEST_LINE_1);
 		addIndividual(TEST_LINE_2);
