@@ -105,6 +105,14 @@ public class CommandTest {
 		assertEquals(TEST_SORT_TEXT, _output.toString());
 	}
 	
+	@Test
+	public void testSearch() {
+		Command.search("in");
+		
+		// check if the results of keyword "in" returns correctly
+		assertEquals(TEST_SEARCH_TEXT, _output.toString());
+	}
+	
 	private void add() {
 		addIndividual(TEST_LINE_1);
 		addIndividual(TEST_LINE_2);
