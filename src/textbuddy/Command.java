@@ -90,7 +90,12 @@ public class Command extends ReadWrite {
 	 * Sort the contents in the file.
 	 */
 	public static void sort() {
-
+		ArrayList<String> lines = getLines();
+		
+		Collections.sort(lines);
+		writeLines(lines);
+		
+		display();
 	}
 	
 	/**
