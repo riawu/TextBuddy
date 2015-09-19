@@ -113,6 +113,14 @@ public class CommandTest {
 		assertEquals(TEST_SEARCH_TEXT, _output.toString());
 	}
 	
+	@Test
+	public void testSearchNotFound() {
+		Command.search("lala");
+		
+		// check if the results of keyword "lala" returns correctly
+		assertEquals(TEST_SEARCH_NOT_FOUND, _output.toString());
+	}
+	
 	private void add() {
 		addIndividual(TEST_LINE_1);
 		addIndividual(TEST_LINE_2);
