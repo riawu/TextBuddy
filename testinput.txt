@@ -1,0 +1,15 @@
+display
+add little brown fox
+add jumped over the moon
+display
+add this assignment is interesting
+strange_cmd
+display
+delete 
+delete 1
+display
+delete 5
+add another test line
+clear
+display
+exit

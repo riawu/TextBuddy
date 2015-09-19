@@ -1,0 +1,5 @@
+cat
+dog
+elephant
+pig
+thisis is what it meeansss i guess?
