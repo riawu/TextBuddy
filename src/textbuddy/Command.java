@@ -103,7 +103,29 @@ public class Command extends ReadWrite {
 	 * @param searchedKey - the key to search
 	 */
 	public static void search(String searchedKey) {
+		ArrayList<String> lines = getLines();
+		HashMap<Integer, String> results = new HashMap<Integer, String>();
+		Boolean isFound = false;
+		
+		if (!searchedKey.equals(""))
+		{
+			for (int i = 0; i < lines.size(); i++) {
+				String line = lines.get(i);
 
+				if (line.contains(searchedKey)) {
+					results.put(i, line);
+					isFound = true;
+				}
+			}
+
+			for (Map.Entry<Integer, String> entry: results.entrySet()) {
+				Message.show(Message.format(MSG_DISPLAY_LINE, entry.getKey() + 1, entry.getValue()));
+			}
+		}
+		
+		if (!isFound) {
+			Message.show(Message.format(MSG_SEARCH_NOT_FOUND));
+		}
 	}
 	
 	/**
